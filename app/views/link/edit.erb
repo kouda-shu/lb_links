@@ -1,0 +1,35 @@
+<%= form_tag("/link/#{@link.id}/update") do %>
+  <div>
+    <div>
+      <a>サイト名</a>
+    </div>
+    <div>
+      <input name="name" value="<%= @link.name %>"><br>
+    </div>
+  </div>
+  <div>
+    <div>
+      <a>URL</a>
+    </div>
+    <div>
+      <input name="url" value="<%= @link.URL %>"><br>
+    </div>
+  </div>
+  <div>
+    <div>
+      <a>ID</a>
+    </div>
+    <div>
+      <input name="userid" value="<%= @link.user_ID %>"><br>
+    </div>
+  </div>
+  <div>
+    <div>
+      <a>PASS</a>
+    </div>
+    <div>
+      <input name="pass"  value="<%= @link.pass %>"><br>
+    </div>
+  </div>
+  <input type="submit" value="登録">
+<% end %>

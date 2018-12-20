@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LbLinks</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if flash[:notice] %>
+      <%= flash[:notice] %>
+    <% end %>
+
+    <% if @user || nil %>
+      <% @user.errors.full_messages.each do |message|  %>
+
+      <p><%= message %></p>
+
+      <% end %>
+    <% end %>
+
+    <% if @link || nil %>
+      <% @link.errors.full_messages.each do |message|  %>
+
+        <p><%= message %></p>
+
+      <% end %>
+    <% end %>
+
+    <% if session[:user] %>
+      <%= session[:user] %>
+      <%= link_to("ログアウト", "/link/logout") %>
+    <% elsif %>
+      <%= form_tag("/link/sign_in") do %>
+        <div>
+          <p>ユーザー名</p>
+          <input name="name">
+        </div>
+        <div>
+          <p>パスワード</p>
+          <input name="pass" type="password">
+        </div>
+        <input type="submit" value="ログイン">
+      <% end %>
+    <% end %>
+
+    <%= yield %>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+  <a>サイト名</a>
+  <a>URL</a>
+  <a>ID</a>
+  <a>PASS</a>
+  <% @links.each do |link| %>
+    <a> <%= link.name %></a>
+    <a> <%= link.URL %></a>
+    <a> <%= link.user_ID %></a>
+    <a> <%= link.pass %></a>
+  <% end %>

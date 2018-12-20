@@ -1,0 +1,8 @@
+<a>ID</a>
+<a>PASS</a>
+<br>
+<% @users.each do |user| %>
+  <a> <%= user.name %></a>
+  <a> <%= user.pass %></a>
+  <br>
+<% end %>
