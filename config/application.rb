@@ -19,7 +19,7 @@ module LbLinks
     # the framework and any gems in your application.
     config.time_zone = 'Tokyo'
 
-    config.assets.initialize_on_precompile = true
+
   end
 end
 
