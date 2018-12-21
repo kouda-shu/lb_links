@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get "link/:id/edit" => "link#edit"
   post "link/:id/update" => "link#update"
   post "link/:id/destroy" => "link#destroy"
+  root 'link/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
